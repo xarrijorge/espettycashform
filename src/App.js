@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Item from './components/Item'
+
+import { BsFillPlusCircleFill } from 'react-icons/bs'
+import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [list, setList] = React.useState([<Item />])
+
+    const updateList = (e) => {
+        e.preventDefault()
+        setList([...list, <Item />])
+        console.log(list)
+    }
+
+    return (
+        <form className='App'>
+            {list.map((item, key) => item)}
+            <BsFillPlusCircleFill className='addButton' onClick={updateList} />
+        </form>
+    )
 }
 
-export default App;
+export default App
