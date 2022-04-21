@@ -1,10 +1,44 @@
 .App {
-    max-width: 720px;
+    max-width: 920px;
+    margin: 50px 0;
+    overflow-x: hidden;
+}
+.elDiv {
+    border-bottom: 1px solid lightgrey;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 .addButton {
-    width: 3em;
-    height: 3em;
+    font-size: 2em;
     cursor: pointer;
-    fill: blue;
+    color: blue;
+    margin: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
     float: right;
+}
+.addButton:disabled {
+    color: gray;
+    cursor: not-allowed;
+}
+input[type='number'] {
+    min-width: 50px;
+    max-width: 100px;
+    /* min-width: max-content; */
+}
+.textInput {
+    margin: 10px !important;
+}
+.submitButton {
+    width: 150px;
+    height: 40px;
+    margin: 40px 0;
+    background-color: blue;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
 }
