@@ -48,19 +48,20 @@ function App() {
     }
 
     const SUBMIT_URI = 'https://esformsbackend.herokuapp.com/pettycash'
+    const LOCAL_URI = 'http://localhost:3001/pettycash'
     const headers = { 'content-type': 'application/json' }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         await axios
-            .post(SUBMIT_URI, submitData, headers)
+            .post(LOCAL_URI, { ...submitData, user: data[0] }, headers)
             .then((response) => {
                 console.log(response)
             })
             .catch((err) => {
                 console.log(err)
             })
-        console.log(submitData)
+        console.log({ ...submitData, user: data[0] })
     }
     React.useEffect(() => {
         inputVal.match(/[a-z.]+@[slib.]{0,4}?[easysolar]+\.[org]{3}/g)
