@@ -47,7 +47,7 @@ function App() {
         })
     }
 
-    const SUBMIT_URI = 'https://esformsbackend.herokuapp.com/pettycash'
+    // const SUBMIT_URI = 'https://esformsbackend.herokuapp.com/pettycash'
     const LOCAL_URI = 'http://localhost:3001/pettycash'
     const headers = { 'content-type': 'application/json' }
 
