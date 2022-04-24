@@ -59,7 +59,7 @@ input[type='number'] {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     color: goldenrod;
     background-color: #3325ee;
