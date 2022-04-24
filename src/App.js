@@ -47,14 +47,14 @@ function App() {
         })
     }
 
-    // const SUBMIT_URI = 'https://esformsbackend.herokuapp.com/pettycash'
-    const LOCAL_URI = 'http://localhost:3001/pettycash'
+    const SUBMIT_URI = 'https://esformsbackend.herokuapp.com/pettycash'
+    // const LOCAL_URI = 'http://localhost:3001/pettycash'
     const headers = { 'content-type': 'application/json' }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         await axios
-            .post(LOCAL_URI, { ...submitData, user: data[0] }, headers)
+            .post(SUBMIT_URI, { ...submitData, user: data[0] }, headers)
             .then((response) => {
                 console.log(response)
             })
